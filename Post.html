@@ -1,0 +1,194 @@
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Login</title>
+
+    <!-- Bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap-theme.min.css">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+<style>
+#header {
+    width:400px;
+   float:left;
+   margin-top: 100px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 50px;
+      
+}
+#footer{
+
+    
+    width:400px;
+    float:left;
+    
+
+
+}
+    </style>
+</head>
+
+<body>
+	<!-- Latest compiled and minified CSS -->
+
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+<nav class="navbar navbar-inverse" role="navigation">
+  <div class="container-fluid" >
+    <!-- Brand and toggle get grouped for better mobile display -->
+    <div class="navbar-header" >
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      
+    </div>
+
+    <!-- Collect the nav links, forms, and other content for toggling -->
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav">
+        <li><a href="beerstore.html">HOME </a></li>
+        <li><a href="register.html">REGISTER </a></li>
+        <li><a href="beerstore.html">LOGIN </a></li>
+         <li><a href="Post.html">POST DATA </a></li>
+
+
+        
+      </ul>
+    </div><!-- /.navbar-collapse -->
+  </div><!-- /.container-fluid -->
+</nav>
+
+<div id="header">
+<form role="form" >
+  
+<div class=".col-lg-*">
+    <label for="exampleInputUserName">UserName</label>
+    <input type="text" class="form-control"  placeholder="Company Name" name="firstname" id="company_name">
+  </div>
+
+
+<div class=".col-lg-*">
+    <label for="exampleInputPassword1">Address</label>
+    <input type="text" class="form-control" placeholder="Address" name="lastname" id="address">
+  </div>
+
+  
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">City</label>
+    <input type="text" class="form-control" placeholder="City" name="lastname1"id="city">
+  </div>
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">State</label>
+    <input type="text" class="form-control" placeholder="State" name="lastname2"id="state">
+  </div>
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">Postal</label>
+    <input type="text" class="form-control" placeholder="Postal" name="lastname3"id="postal">
+  </div>
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">Country</label>
+    <input type="text" class="form-control" placeholder="Country" name="lastname4"id="country">
+  </div>
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">Phone</label>
+    <input type="text" class="form-control" placeholder="Phone" name="lastname5"id="phone">
+  </div>
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">URL</label>
+    <input type="text" class="form-control" placeholder="URL" name="lastname6"id="url">
+  </div>
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">Notes</label>
+    <input type="text" class="form-control" placeholder="Notes" name="lastname7"id="notes">
+  </div>
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">Status</label>
+    <input type="text" class="form-control" placeholder="Status" name="lastname8"id="status">
+  </div>
+  <div class=".col-lg-*">
+    <label for="exampleInputPassword1">Colour</label>
+    <input type="text" class="form-control" placeholder="Colour" name="lastname9"id="colour">
+  </div>
+
+
+<br/>
+
+
+  
+  
+  
+  <button type="button" class="btn btn-default" onclick=loadXMLDoc()>Submit</button>
+</form>
+</div>
+<div id="answer"></div>
+<script>
+
+function loadXMLDoc()
+{
+	var object={company_name:"",address:"",city:"",state:"",postal:"",country:"",phone:"",url:"",notes:"",status:"",
+	colour:""};
+	object.address=document.getElementById("address").value;
+	object.city=document.getElementById("city").value;
+	object.state=document.getElementById("state").value;
+	object.postal=document.getElementById("postal").value;
+	object.company_name=document.getElementById("company_name").value;
+	object.country=document.getElementById("country").value;
+	object.phone=document.getElementById("phone").value;
+	object.url=document.getElementById("url").value;
+	object.notes=document.getElementById("notes").value;
+	object.status=document.getElementById("status").value;
+	object.colour=document.getElementById("colour").value;
+	var input=JSON.stringify(object);
+	
+
+	
+var xmlhttp;
+if (window.XMLHttpRequest)
+  {// code for IE7+, Firefox, Chrome, Opera, Safari
+  xmlhttp=new XMLHttpRequest();
+  }
+else
+  {// code for IE6, IE5
+  xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
+  }
+xmlhttp.onreadystatechange=function()
+  {
+  if (xmlhttp.readyState==4 && xmlhttp.status==200)
+    {
+    document.getElementById("answer").innerHTML=xmlhttp.responseText;
+    }
+  }
+xmlhttp.open("POST","https://msuhailwebapi.herokuapp.com/api/V1?name="+input,true);
+//xmlhttp.setRequestHeader("Content-type","application/x-www-form-urlencoded");
+xmlhttp.send();
+console.log(input);
+
+}
+
+
+
+
+</script>
+
+
+
+
+ 
+</body>
+</html>

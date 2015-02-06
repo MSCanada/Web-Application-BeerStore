@@ -1,0 +1,2 @@
+This is a webapplication of the android app developed before. Its exactly the same as android app but here user would be able to perform same functions without using the app on web platform.
+Skills: HTML,CSS,JAVASCRIPT,AngularJS
